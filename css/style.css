@@ -30,11 +30,85 @@ h6 {
 html,
 body {
     height: 100%;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
     line-height: 1;
-    font-style: 16px;
-    color: #000;
+    color: #252B42;
+    
 }
+/* ---------- Контейнеры ---------- */
 .wrapper {
+    position: relative;
     min-height: 100%;
     overflow: hidden;
+}
+._container {
+    max-width: 1046px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: content-box;
+}
+/* ---------- Шапка ---------- */
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    min-height: 104px;
+}
+@media (max-width: 479px) {
+    .header__container {
+        min-height: 70px;
+    }
+}
+.header__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: inherit;
+}
+.header__menu {
+    margin: 0 0 0 133px;
+}
+@media (max-width: 992px) {
+    .header__menu {
+        margin: 0 0 0 80px;
+    }
+}
+@media (max-width: 767px) {
+    .header__menu {
+        margin: 0 0 0 50px;
+    }
+}
+@media (max-width: 479px) {
+    .header__menu {
+        margin: 0 0 0 20px;
+    }
+}
+.menu {
+    padding: 5px 0;
+}
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu__item {
+}
+.menu__item:not(:last-child) {
+    margin: 0 21px 0 0;
+}
+.menu__link {
+    font-weight: 600;
+    line-height: calc(24 / 14 * 100%);
+    color: #737373;
+}
+@media (max-width: 479px) {
+    .menu__link {
+        font-size: 18px;
+    }
 }
