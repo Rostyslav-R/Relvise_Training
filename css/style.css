@@ -111,8 +111,6 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
-.menu__item {
-}
 .menu__item:not(:last-child) {
     margin: 0 21px 0 0;
 }
@@ -127,17 +125,23 @@ body {
     }
 }
 /* ---------- Основной блок ---------- */
-.main {
+.page {
     flex: 1 1 auto;
-/* ----------Нижний блок ---------- */
 }
+.page__main-block {
+}
+.page__services {
+    position: relative;
+    z-index: 2;
+    margin: -111px 0 0 0;
+}
+/* ----------Нижний блок ---------- */
 .footer {
+    margin: 0;
 }
 /* ---------- Основной блок ---------- */
 .main-block {
     position: relative;
-}
-.main-block__container {
 }
 .main-block__body {
     position: relative;
@@ -148,6 +152,11 @@ body {
 @media (max-width: 992px) {
     .main-block__body {
         padding: 120px 0 191px 0;
+    }
+}
+@media (max-width: 479px) {
+    .main-block__body {
+        padding: 115px 0 160px 0;
     }
 }
 .main-block__body > *:not(:last-child){
@@ -227,4 +236,74 @@ body {
     .main-block__image img {
         opacity: 0.5;
     }
+}
+/* ---------- Блок сервисов ---------- */
+.services {
+}
+.services__container {
+}
+.services__body {
+}
+@media (min-width: 670px) {
+    .services__body {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+}
+.services__column {
+    flex: 0 1 33.333%;
+}
+@media (min-width: 670px) {
+    .services__column {
+        padding: 0 15px;
+    }
+}
+@media (max-width: 992px) {
+    .services__column {
+        flex: 0 1 50%;
+    }
+    .services__column:last-child {
+        flex: 1 1 100%;
+    }
+    .services__column:not(:last-child) {
+        margin: 0 0 30px 0; 
+    }
+}
+.services__item {
+    height: 100%;
+    padding: 35px;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+}
+@media (max-width:479px) {
+    .services__item {
+        padding: 25px;
+    }
+}
+.item-service {
+}
+.item-service_green {
+    background-color: #0D5C63;
+}
+.item-service_green .item-service__title {
+    color: #fff;
+}
+.item-service_green .item-service__text {
+    color: #fff;
+}
+.item-service > *:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+.item-service__icon {
+}
+.item-service__title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    line-height: 133%;
+}
+.item-service__text {
+    line-height: 142%;
+    color: #737373;
 }
