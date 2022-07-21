@@ -146,6 +146,11 @@ body {
 }
 .page__whoweare {
 }
+.page__clients:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+.page__subscribe {
+}
 /* -------------------- Общий блок стилей заголовков -------------------- */
 .header-block {
     letter-spacing: 0.2px;
@@ -617,3 +622,123 @@ body {
     line-height: calc(20 / 14 * 100%);
     color: #737373;
 }
+/* ---------------------- Блок клиенты ---------------------- */
+.clients {
+    padding: 50px 0;
+}
+.clients__container {
+}
+.clients__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.clients__item {
+    flex: 0 1 16.6667%;
+    padding: 8px 15px;
+    min-width: 140px;
+    text-align: center;
+}
+.clients__item img {
+    max-width: 100%;
+}
+@media (max-width: 767px) {
+    .clients {
+        padding: 30px 0;
+    }
+}
+/* ---------------------- Блок подписка ---------------------- */
+.subscribe {
+    position: relative;
+    padding: 0 0 20px 0;
+}
+.subscribe::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 77px;
+    background-color: #252B42;
+}
+.subscribe__container {
+}
+.subscribe__body {
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    padding: 30px 50px;
+    border-radius: 2px;
+    background-color: #17213C;
+}
+.subscribe__title {
+    flex: 0 1 50%;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: calc(32 / 23 * 100%);
+    color: #fff;
+
+}
+.subscribe__form {
+    display: flex;
+    flex: 0 1 50%;
+    align-items: center;
+}
+.subscribe__input {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 58px;
+    padding: 0 20px;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+    color: #737373;
+}
+.subscribe__input:focus {
+    color: #000000;
+}
+.subscribe__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 58px;
+    padding: 0 22px;
+    border: 1px solid #E6E6E6;
+    border-radius: 0px 5px 5px 0px;
+    background-color: #FF7B47;
+    text-align: center;
+    color: #fff;
+}
+@media (min-width: 810px) {
+    .subscribe__body {
+        display: flex;
+        justify-content: space-between;
+    }
+    .subscribe__title {
+        max-width: 266px;
+    }
+}
+@media (min-width: 1070px) {
+    .subscribe__body {
+        margin: 0 30px;
+    }
+}
+@media (max-width: 810px) {
+    .subscribe__body {
+        margin: 0 -15px;
+        padding: 20px 15px;
+    }
+    .subscribe__title {
+        margin: 0 0 20px 0;
+    }
+    .subscribe__input {
+        padding: 0 15px;
+    }
+    .subscribe__button {
+        padding: 0 15px;
+    }
+}
+/* --------------------- Блок связаться ----------------------- */
